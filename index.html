@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/styles.min.css"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    
+
+    <div id="navWrapper">
+      <nav>
+        <ul>
+          <li class="active">
+            <a href="#personal-info"
+              ><img
+                src="images/circle-user-solid-full.svg"
+                alt="Personal Information"
+              /><span>Personal Information</span></a
+            >
+          </li>
+          <li>
+            <a href="#projects"
+              ><img
+                src="images/folder-closed-solid-full.svg"
+                alt="Projects"
+              /><span>Projects</span></a
+            >
+          </li>
+          <li>
+            <a href="#skills"
+              ><img src="images/stairs-solid-full.svg" alt="Skills" /><span
+                >Skills</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#experience"
+              ><img
+                src="./images/building-user-solid-full.svg"
+                alt="Experience"
+              /><span>Experience</span></a
+            >
+          </li>
+          <li>
+            <a href="#contact"
+              ><img src="images/phone-solid-full.svg" alt="Contact" /><span
+                >Contact</span
+              ></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- end nav wrapper -->
+
+    <div id="mainWrapper">
+      <main>
+        <section id="personal-info">
+          <h2>Personal Information</h2>
+          <div class="info-card">
+            <p><span class="info-label">Full Name</span>Quang Phat Mai</p>
+            <p><span class="info-label">Date of Birth</span>March 09, 2004</p>
+            <p><span class="info-label">Location</span>Salt Lake City, UT</p>
+            <p>
+              <span class="info-label">University</span>Utah Valley University
+            </p>
+            <p>
+              <span class="info-label">Program</span>Digital Media - Web and App
+              Design and Development
+            </p>
+            <p>
+              <span class="info-label">Expected Graduation</span>Spring 2027
+            </p>
+            <p>
+              <span class="info-label">Career Goal</span>Frontend Developer
+              focused on accessible and responsive interfaces
+            </p>
+            <p>
+              <span class="info-label">Technical Interests</span>UI Design, UX
+              Research, and Frontend Engineering
+            </p>
+            <p><span class="info-label">Languages</span>English, Vietnamese</p>
+          </div>
+        </section>
+
+        <section id="projects">
+          <h2>Projects</h2>
+          <div class="filter-bar" aria-label="Project Filter Placeholder">
+            <button type="button" class="filter-chip active">All</button>
+            <button type="button" class="filter-chip">Web</button>
+            <button type="button" class="filter-chip">UI</button>
+            <button type="button" class="filter-chip">Mobile</button>
+          </div>
+
+          <div class="card-grid projects-grid">
+            <article class="content-card" data-category="web">
+              <img src="./images/web-project.webp" alt="Web Project" />
+              <a href="#"><h3>Responsive Marketing Website</h3></a>
+              <p>
+                A modern, responsive marketing website designed with a strong
+                focus on user experience and conversion. Features structured
+                layouts, clear call-to-actions, and optimized content flow for
+                different screen sizes.
+              </p>
+            </article>
+            <article class="content-card" data-category="ui">
+              <img src="./images/ui_1.webp" alt="UI Project" />
+              <a href="#"><h3>E-Commerce Landing Page</h3></a>
+              <p>
+                A visually engaging e-commerce landing page built for both web
+                and mobile. Showcases products with clean UI, responsive design,
+                and intuitive layout to enhance browsing and drive user
+                engagement.
+              </p>
+            </article>
+            <article class="content-card" data-category="mobile">
+              <img src="./images/mobile_1.webp" alt="Mobile Project" />
+              <a href="#"><h3>Mobile Booking App</h3></a>
+              <p>
+                A mobile-first booking application with a focus on accessibility
+                and seamless user experience across different device sizes.
+              </p>
+            </article>
+            <article class="content-card" data-category="web">
+              <img src="./images/web-project_2.webp" alt="Web Project" />
+              <a href="#"><h3>Interactive Portfolio Website</h3></a>
+              <p>
+                Placeholder summary for an e-commerce landing page with product
+                highlights.
+              </p>
+            </article>
+            <article class="content-card" data-category="ui">
+              <img src="./images/ui_2.webp" alt="UI Project" />
+              <a href="#"><h3>Design System Prototype</h3></a>
+              <p>
+                A comprehensive design system prototype with a curated component
+                library for consistent UI development.
+              </p>
+            </article>
+            <article class="content-card" data-category="mobile">
+              <img src="./images/mobile_2.webp" alt="Mobile Project" />
+              <a href="#"><h3>Travel App Concept</h3></a>
+              <p>
+                A travel app concept with an intuitive navigation system and
+                seamless user experience across devices.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="skills">
+          <h2>Skills</h2>
+          <div class="card-grid experiences-grid">
+            <article class="content-card">
+              <img src="./images/html.webp" alt="" />
+              <h3>HTML and Semantic Structure</h3>
+              <p>
+                Building accessible page structure using semantic tags, clear
+                hierarchy, and meaningful markup.
+              </p>
+            </article>
+            <article class="content-card">
+              <img src="./images/css.webp" alt="" />
+              <h3>Responsive CSS Layouts</h3>
+              <p>
+                Designing layouts with Grid and Flexbox across small, medium,
+                and large breakpoints.
+              </p>
+            </article>
+            <article class="content-card">
+              <img src="./images/javascript.webp" alt="" />
+              <h3>JavaScript Interaction</h3>
+              <p>
+                Creating interactive UI with filtering, navigation state
+                updates, and scroll-based behavior.
+              </p>
+            </article>
+            <article class="content-card">
+              <img src="./images/Prototyping.webp" alt="" />
+              <h3>Design and Prototyping</h3>
+              <p>
+                Planning user flows, wireframes, and polished interface systems
+                for consistent visual design.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="experience">
+          <h2>Experience</h2>
+          <div class="card-grid experiences-grid">
+            <article class="content-card">
+              <h3>Frontend Developer Intern</h3>
+              <p>
+                ABC Tech Company • Jan 2025 – Apr 2025<br />
+                Built responsive web pages and improved UI consistency across
+                projects.
+              </p>
+            </article>
+            <article class="content-card">
+              <h3>Web Design Assistant</h3>
+              <p>
+                Creative Studio • Sep 2024 – Dec 2024<br />
+                Assisted in designing layouts and implementing responsive
+                components.
+              </p>
+            </article>
+            <article class="content-card">
+              <h3>Frontend Developer (Freelance)</h3>
+              <p>
+                Self-employed • Jun 2024 – Aug 2024<br />
+                Developed interactive UI features and optimized user experience.
+              </p>
+            </article>
+            <article class="content-card">
+              <h3>UI/UX Design Intern</h3>
+              <p>
+                Design Lab • Jan 2024 – May 2024<br />
+                Created wireframes and prototypes for web and mobile
+                applications.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <div class="contact-copy">
+            <p>
+              If you want to reach me about internships, collaboration, or
+              portfolio feedback, here are the best ways to connect.
+            </p>
+            <div class="contact-details">
+              <p>
+                <span class="contact-label">Email</span>maiquangfat@gmail.com
+              </p>
+              <p>
+                <span class="contact-label">Location</span>Salt Lake City, UT
+              </p>
+              <p>
+                <span class="contact-label">Availability</span>Open to
+                internships and freelance UI work
+              </p>
+              <p>
+                <span class="contact-label">Response Time</span>Usually within
+                24 hours
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <a href="#"
+              ><img
+                src="./images/facebook-brands-solid-full.svg"
+                alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img
+                src="./images/instagram-brands-solid-full.svg"
+                alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img src="./images/envelope-solid-full.svg" alt="Email"
+            /></a>
+            <a href="#"
+              ><img
+                src="./images/linkedin-brands-solid-full.svg"
+                alt="LinkedIn"
+            /></a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- end main wrapper -->
+
+    <div id="footerWrapper">
+      <footer>
+        <p>
+          Copyright &copy; 2026 Quang Phat Mai. All rights reserved.
+          <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> |
+          <a href="#">Clients</a>
+        </p>
+      </footer>
+    </div>
+    <!-- end footer wrapper -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

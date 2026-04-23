@@ -1,0 +1,414 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+    background-color: white;
+    color: $textColor;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {
+    background: rgba($surfaceColor, 0.85);
+    border-bottom: 1px solid $greyColor;
+}
+header {
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+    span {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $primaryColor;
+    }
+} // end header
+
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+
+main {
+    section {
+        height: auto;
+        padding: 1.25rem $gutter;
+        scroll-margin-top: 5rem;
+    }
+}
+
+/* NAVIGATION STUFF GOES HERE  */
+
+#navWrapper {
+    background-color: $primaryColor;
+    border-bottom: 1px solid $greyColor;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 8px 20px rgba($primaryColor, 0.2);
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        li {
+            a {
+                text-decoration: none;
+                color: $surfaceColor;
+                display: block;
+                padding: 1rem 1rem;
+                border-radius: 4px;
+                width: 100%;
+                transition: transform .2s ease, background-color .2s ease, color .2s ease;
+            }
+
+            a:hover {
+                background: $surfaceColor;
+                color: $primaryColor;
+                transform: translateY(-1px);
+            }
+
+            a:focus-visible {
+                outline: 3px solid $accentColor;
+                outline-offset: 2px;
+            }
+        }
+
+        li.active { 
+            a{
+                background-color: $secondaryColor;
+                color: $surfaceColor;
+            }
+        }
+    
+    }
+}
+
+li a span {
+    display: none;
+}
+
+li a img {
+    display: block;
+    width: 30px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    transition: filter .2s ease;
+}
+
+
+li a:hover img,
+li.active a img {
+    filter: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    h1 {
+        padding: 1rem $gutter.5rem $gutter;
+        font-size: 1.5rem;
+        color: $secondaryColor;
+        font-weight: $lightWeight
+    }
+    p {
+        padding: .5rem $gutter;
+        color: $mutedTextColor;
+        line-height: $leading;
+    }
+}// end main
+
+main section {
+    background: rgba($surfaceColor, 0.88);
+    border: 1px solid $greyColor;
+    border-radius: 14px;
+    margin: 1.1rem 0;
+    box-shadow: 0 14px 30px $shadowColor;
+}
+
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    margin: 1.1rem 0;
+    padding: 2rem 1rem;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    background:
+        linear-gradient(135deg, rgba($primaryColor, 0.92) 0%, rgba($secondaryColor, 0.78) 48%, rgba($accentColor, 0.88) 100%);
+    box-shadow: 0 18px 36px rgba($primaryColor, 0.28);
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top right, rgba($surfaceColor, 0.18), transparent 30%),
+        radial-gradient(circle at bottom left, rgba($surfaceColor, 0.12), transparent 26%);
+    pointer-events: none;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(16, 7, 35, 0.08) 0%, rgba(16, 7, 35, 0.42) 100%);
+    pointer-events: none;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 34rem;
+    padding: 1.25rem 1.25rem 1.35rem;
+    border-radius: 16px;
+    background: rgba($surfaceColor, 0.12);
+    border: 1px solid rgba($surfaceColor, 0.22);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: $surfaceColor;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+.hero-text h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 4.25rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    color: $surfaceColor;
+}
+
+.hero-text p {
+    margin: 0.85rem 0 0;
+    padding: 0;
+    max-width: 24rem;
+    color: rgba($surfaceColor, 0.92);
+    font-size: 1.05rem;
+    line-height: 1.55;
+}
+
+#contact {
+    min-height: 32rem;
+}
+
+main h2 {
+    margin: 0 0 .9rem 0;
+    color: $primaryColor;
+    font-size: 1.35rem;
+}
+
+.info-card,
+.content-card {
+    background: linear-gradient(180deg, $surfaceColor 0%, $surfaceAltColor 100%);
+    border: 1px solid $cardBorderColor;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 8px 24px rgba($primaryColor, 0.1);
+}
+
+.content-card img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: .75rem;
+}
+
+.info-card h3,
+.content-card a {
+    margin: 0 0 .5rem 0;
+    color: $secondaryColor;
+    text-decoration: none;
+}
+
+.info-card p,
+.content-card p {
+    margin: 0;
+    padding: 0;
+}
+
+.info-card p {
+    padding: .5rem 0;
+    border-bottom: 1px dashed $greyColor;
+}
+
+.info-card p:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    display: inline;
+    margin-right: .4rem;
+    color: $primaryColor;
+    font-weight: $normalWeight;
+}
+
+.info-label::after {
+    content: ":";
+    margin-left: .2rem;
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: .5rem 0 1rem 0;
+}
+
+.filter-chip {
+    border: 1px solid $secondaryColor;
+    background: $surfaceColor;
+    color: $secondaryColor;
+    border-radius: 999px;
+    padding: .35rem .9rem;
+    font-weight: $normalWeight;
+    cursor: pointer;
+    transition: background-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.filter-chip:hover {
+    transform: translateY(-1px);
+}
+
+.filter-chip.active {
+    background: $secondaryColor;
+    color: $surfaceColor;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.contact-copy {
+    margin-bottom: 1rem;
+}
+
+.contact-copy p {
+    margin: 0;
+    padding: 0;
+}
+
+.contact-details {
+    display: grid;
+    gap: .5rem;
+    margin-top: .9rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba($secondaryColor, 0.06);
+    border: 1px solid $greyColor;
+}
+
+.contact-details p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem;
+    align-items: baseline;
+    color: $mutedTextColor;
+}
+
+.contact-label {
+    color: $primaryColor;
+    font-weight: $normalWeight;
+}
+
+#contact .info-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+    padding: 1rem;
+}
+
+#contact .info-card a {
+    width: 3rem;
+    height: 3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    border: 1px solid $cardBorderColor;
+    background: linear-gradient(135deg, $surfaceColor 0%, #f2eaff 100%);
+    box-shadow: 0 8px 18px rgba($primaryColor, 0.12);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+}
+
+#contact .info-card a:hover {
+    transform: translateY(-2px) scale(1.03);
+    border-color: $secondaryColor;
+    box-shadow: 0 12px 24px rgba($primaryColor, 0.2);
+    background: linear-gradient(135deg, $surfaceColor 0%, #e8d8ff 100%);
+}
+
+#contact .info-card a:focus-visible {
+    outline: 3px solid $accentColor;
+    outline-offset: 2px;
+}
+
+#contact .info-card img {
+    width: 1.35rem;
+    height: 1.35rem;
+    margin: 0;
+    display: block;
+    object-fit: contain;
+    filter: invert(16%) sepia(33%) saturate(2172%) hue-rotate(236deg) brightness(92%) contrast(94%);
+    transition: transform .2s ease;
+}
+
+#contact .info-card a:hover img {
+    transform: scale(1.08);
+}
+
+
+
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+    background-color: $primaryColor;
+} // end footer wrapper
+
+footer {
+    font-size: .85rem;
+    padding: 1rem $gutter;
+    color: $surfaceColor;
+    text-align: center;
+    line-height: $leading;
+    a {color: $surfaceColor;}
+
+}// end footer
