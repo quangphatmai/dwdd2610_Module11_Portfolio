@@ -585,6 +585,14 @@ main h2 {
   box-shadow: 0 16px 32px rgba(43, 10, 87, 0.18);
 }
 
+/* When a grid holds a single card (e.g. Experience with one real entry),
+   span the row and align it left instead of leaving unbalanced empty tracks */
+.experiences-grid .content-card:only-child {
+  grid-column: 1/-1;
+  max-width: 28rem;
+  margin: 0;
+}
+
 .content-card img {
   width: 100%;
   height: auto;
@@ -608,6 +616,51 @@ main h2 {
 .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* Skills: intentionally flat/inert so they don't read as clickable like project cards */
+.skills-grid {
+  gap: 0.75rem;
+}
+
+.skill-card {
+  background: #fbf8ff;
+  border: 1px solid rgba(216, 201, 243, 0.7);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.skill-card h3 {
+  margin: 0;
+  padding: 0;
+  color: #6a2ccf;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.skill-card p {
+  margin: 0;
+  padding: 0;
+  color: #3b2a59;
+  font-size: 0.875rem;
+  line-height: 150%;
 }
 
 .info-card h3,
@@ -804,6 +857,9 @@ footer a {
   .experiences-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 @media only screen and (min-width: 64rem) {
   body {
@@ -841,6 +897,9 @@ footer a {
   }
   .experiences-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .skills-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

@@ -75,8 +75,9 @@ function normalizeFilterValue(value) {
 
 function applyProjectFilter(filterValue) {
   projectCards.forEach((card) => {
-    const category = normalizeFilterValue(card.dataset.category || '')
-    const shouldShow = filterValue === 'all' || category === filterValue
+    // A card can belong to more than one category (e.g. data-category="web ui")
+    const categories = normalizeFilterValue(card.dataset.category || '').split(' ').filter(Boolean)
+    const shouldShow = filterValue === 'all' || categories.includes(filterValue)
     card.style.display = shouldShow ? '' : 'none'
   })
 }

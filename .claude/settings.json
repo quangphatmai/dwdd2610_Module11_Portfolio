@@ -3,7 +3,8 @@
     "allow": [
       "Bash(npx --version)",
       "Bash(npx sass *)",
-      "Bash(git rm *)"
+      "Bash(git rm *)",
+      "Bash(node --check js/scripts.js)"
     ]
   }
 }

@@ -317,6 +317,14 @@ main h2 {
     box-shadow: 0 16px 32px rgba($primaryColor, 0.18);
 }
 
+/* When a grid holds a single card (e.g. Experience with one real entry),
+   span the row and align it left instead of leaving unbalanced empty tracks */
+.experiences-grid .content-card:only-child {
+    grid-column: 1 / -1;
+    max-width: 28rem;
+    margin: 0;
+}
+
 .content-card img {
     width: 100%;
     height: auto;
@@ -340,6 +348,51 @@ main h2 {
 .reveal.is-visible {
     opacity: 1;
     transform: none;
+}
+
+/* Skills: intentionally flat/inert so they don't read as clickable like project cards */
+.skills-grid {
+    gap: .75rem;
+}
+
+.skill-card {
+    background: $surfaceAltColor;
+    border: 1px solid rgba($greyColor, 0.7);
+    border-radius: 10px;
+    padding: .9rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.skill-card-header {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.skill-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.skill-card h3 {
+    margin: 0;
+    padding: 0;
+    color: $secondaryColor;
+    font-size: 1rem;
+    font-weight: $normalWeight;
+    line-height: 1.25;
+}
+
+.skill-card p {
+    margin: 0;
+    padding: 0;
+    color: $mutedTextColor;
+    font-size: .875rem;
+    line-height: $leading;
 }
 
 .info-card h3,
