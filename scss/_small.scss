@@ -23,6 +23,26 @@ body {
 }
 
 
+/* --------------------------- SKIP LINK --------------------------- */
+.skip-link {
+    position: absolute;
+    top: -3rem;
+    left: 1rem;
+    z-index: 1000;
+    padding: .6rem 1rem;
+    background: $primaryColor;
+    color: $surfaceColor;
+    border-radius: 0 0 8px 8px;
+    text-decoration: none;
+    font-weight: $normalWeight;
+    transition: top .2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+
 /* --------------------------- HEADER --------------------------- */
 #headerWrapper {
     background: rgba($surfaceColor, 0.85);
@@ -207,6 +227,7 @@ main section {
 
 .hero-text h1 {
     margin: 0;
+    padding: 0;
     font-size: clamp(2.2rem, 5vw, 4.25rem);
     line-height: 0.95;
     letter-spacing: -0.04em;
@@ -220,6 +241,54 @@ main section {
     color: rgba($surfaceColor, 0.92);
     font-size: 1.05rem;
     line-height: 1.55;
+}
+
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1.5rem;
+    border-radius: 999px;
+    font-weight: $normalWeight;
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+    outline: 3px solid $accentColor;
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    background: $surfaceColor;
+    color: $primaryColor;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: $surfaceColor;
+    border: 1px solid rgba($surfaceColor, 0.6);
+}
+
+.btn-outline:hover {
+    background: rgba($surfaceColor, 0.14);
+    border-color: $surfaceColor;
 }
 
 #contact {
@@ -239,13 +308,38 @@ main h2 {
     border-radius: 12px;
     padding: 1rem;
     box-shadow: 0 8px 24px rgba($primaryColor, 0.1);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
-.content-card img{
+.content-card:hover {
+    transform: translateY(-4px);
+    border-color: $secondaryColor;
+    box-shadow: 0 16px 32px rgba($primaryColor, 0.18);
+}
+
+.content-card img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     margin-bottom: .75rem;
+    overflow: hidden;
+    transition: transform .3s ease;
+}
+
+.content-card:hover img {
+    transform: scale(1.03);
+}
+
+/* Reveal-on-scroll (progressive enhancement; JS adds/removes these classes) */
+.reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
 }
 
 .info-card h3,
@@ -302,6 +396,11 @@ main h2 {
 
 .filter-chip:hover {
     transform: translateY(-1px);
+}
+
+.filter-chip:focus-visible {
+    outline: 3px solid $accentColor;
+    outline-offset: 2px;
 }
 
 .filter-chip.active {

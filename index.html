@@ -3,7 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <title>Portfolio Page</title>
+    <meta
+      name="description"
+      content="Quang Phat Mai — Frontend Developer portfolio featuring web, UI, and mobile projects."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -18,13 +23,13 @@
       </head>
 
   <body>
-    
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <div id="navWrapper">
-      <nav>
+      <nav aria-label="Primary">
         <ul>
           <li class="active">
-            <a href="#personal-info"
+            <a href="#personal-info" aria-current="page"
               ><img
                 src="images/circle-user-solid-full.svg"
                 alt="Personal Information"
@@ -67,7 +72,22 @@
     <!-- end nav wrapper -->
 
     <div id="mainWrapper">
-      <main>
+      <main id="main-content" tabindex="-1">
+        <section class="hero-section" aria-label="Introduction">
+          <div class="hero-text">
+            <h1>Quang Phat Mai</h1>
+            <p>
+              Frontend Developer focused on accessible and responsive
+              interfaces &mdash; currently studying Web and App Design and
+              Development at Utah Valley University.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#projects">View My Work</a>
+              <a class="btn btn-outline" href="#contact">Get In Touch</a>
+            </div>
+          </div>
+        </section>
+
         <section id="personal-info">
           <h2>Personal Information</h2>
           <div class="info-card">
@@ -98,11 +118,11 @@
 
         <section id="projects">
           <h2>Projects</h2>
-          <div class="filter-bar" aria-label="Project Filter Placeholder">
-            <button type="button" class="filter-chip active">All</button>
-            <button type="button" class="filter-chip">Web</button>
-            <button type="button" class="filter-chip">UI</button>
-            <button type="button" class="filter-chip">Mobile</button>
+          <div class="filter-bar" role="group" aria-label="Filter projects by category">
+            <button type="button" class="filter-chip active" aria-pressed="true">All</button>
+            <button type="button" class="filter-chip" aria-pressed="false">Web</button>
+            <button type="button" class="filter-chip" aria-pressed="false">UI</button>
+            <button type="button" class="filter-chip" aria-pressed="false">Mobile</button>
           </div>
 
           <div class="card-grid projects-grid">
@@ -181,7 +201,7 @@
               </p>
             </article>
             <article class="content-card">
-              <img src="./images/javascript.webp" alt="" />
+              <img src="./images/JavaScript.webp" alt="" />
               <h3>JavaScript Interaction</h3>
               <p>
                 Creating interactive UI with filtering, navigation state

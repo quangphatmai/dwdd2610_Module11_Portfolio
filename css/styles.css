@@ -72,8 +72,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -309,16 +308,37 @@ html {
 
 /*  Apply a natural box layout model to all elements  */
 * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 /* --------------------------- BODY --------------------------- */
 body {
-  font-family: "Spline Sans", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 300;
   min-width: 320px;
   background-color: white;
   color: #1f1233;
+}
+
+/* --------------------------- SKIP LINK --------------------------- */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  z-index: 1000;
+  padding: 0.6rem 1rem;
+  background: #2b0a57;
+  color: #ffffff;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 /* --------------------------- HEADER --------------------------- */
@@ -330,8 +350,7 @@ body {
 header {
   display: grid;
   grid-template-columns: 50px auto;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   align-items: center;
   padding: 0.5rem 10px;
 }
@@ -468,6 +487,7 @@ main section {
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.22);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   color: #ffffff;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
@@ -475,6 +495,7 @@ main section {
 
 .hero-text h1 {
   margin: 0;
+  padding: 0;
   font-size: clamp(2.2rem, 5vw, 4.25rem);
   line-height: 0.95;
   letter-spacing: -0.04em;
@@ -488,6 +509,54 @@ main section {
   color: rgba(255, 255, 255, 0.92);
   font-size: 1.05rem;
   line-height: 1.55;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid #8a4dff;
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #2b0a57;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: #ffffff;
 }
 
 #contact {
@@ -507,6 +576,13 @@ main h2 {
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 8px 24px rgba(43, 10, 87, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-4px);
+  border-color: #6a2ccf;
+  box-shadow: 0 16px 32px rgba(43, 10, 87, 0.18);
 }
 
 .content-card img {
@@ -514,6 +590,24 @@ main h2 {
   height: auto;
   border-radius: 8px;
   margin-bottom: 0.75rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.content-card:hover img {
+  transform: scale(1.03);
+}
+
+/* Reveal-on-scroll (progressive enhancement; JS adds/removes these classes) */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
 .info-card h3,
@@ -570,6 +664,11 @@ main h2 {
 
 .filter-chip:hover {
   transform: translateY(-1px);
+}
+
+.filter-chip:focus-visible {
+  outline: 3px solid #8a4dff;
+  outline-offset: 2px;
 }
 
 .filter-chip.active {
@@ -654,8 +753,7 @@ main h2 {
   height: 1.35rem;
   margin: 0;
   display: block;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   filter: invert(16%) sepia(33%) saturate(2172%) hue-rotate(236deg) brightness(92%) contrast(94%);
   transition: transform 0.2s ease;
 }
@@ -744,4 +842,6 @@ footer a {
   .experiences-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */

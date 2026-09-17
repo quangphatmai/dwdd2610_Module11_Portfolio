@@ -25,8 +25,12 @@ const myObserver = new IntersectionObserver((entries) => {
 }, observerOptions)
 
 function setActiveNavItem(navItem) {
+  const previousLink = navList?.querySelector('li.active a')
+  previousLink?.removeAttribute('aria-current')
   navList?.querySelector('li.active')?.classList.remove('active')
+
   navItem?.classList.add('active')
+  navItem?.querySelector('a')?.setAttribute('aria-current', 'page')
 }
 
 function setActiveBySectionId(sectionId) {
@@ -81,8 +85,12 @@ filterChips.forEach((chip) => {
   chip.addEventListener('click', () => {
     const filterValue = normalizeFilterValue(chip.textContent || '')
 
-    filterChips.forEach((item) => item.classList.remove('active'))
+    filterChips.forEach((item) => {
+      item.classList.remove('active')
+      item.setAttribute('aria-pressed', 'false')
+    })
     chip.classList.add('active')
+    chip.setAttribute('aria-pressed', 'true')
 
     applyProjectFilter(filterValue)
   })
@@ -91,4 +99,29 @@ filterChips.forEach((chip) => {
 const initialActiveChip = document.querySelector('.filter-chip.active')
 if (initialActiveChip) {
   applyProjectFilter(normalizeFilterValue(initialActiveChip.textContent || 'all'))
+}
+
+// Reveal cards as they scroll into view (skipped for users who prefer reduced motion)
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+const revealTargets = [...document.querySelectorAll('.info-card, .content-card')]
+
+if (prefersReducedMotion) {
+  revealTargets.forEach((el) => el.classList.add('is-visible'))
+} else {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }
+  )
+
+  revealTargets.forEach((el) => {
+    el.classList.add('reveal')
+    revealObserver.observe(el)
+  })
 }
