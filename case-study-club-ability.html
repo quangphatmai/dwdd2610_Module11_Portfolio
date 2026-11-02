@@ -1,0 +1,1078 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Club Ability Website Redesign — Case Study | Quang Phat Mai</title>
+    <meta
+      name="description"
+      content="Case study: how our team redesigned Club Ability's website so parents, students and adult learners can find a class. Research, personas, wireframes, prototype and usability testing."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- Google Fonts: Fraunces (headings) and DM Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/case-study.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <main id="main-content" tabindex="-1">
+      <!-- ============ HERO ============ -->
+      <header class="hero">
+        <div class="section-inner">
+          <a class="back-link" href="index.html#projects">&larr; Back to portfolio</a>
+
+          <div class="hero-row">
+            <div class="hero-text">
+              <p class="eyebrow">Case Study 02 &middot; DWDD 2410 &middot; Spring 2026</p>
+              <h1>Redesigning Club Ability’s website so people can find a class</h1>
+              <p class="lede">
+                Club Ability teaches technology to kids, young adults and adult
+                learners. Its website is the first stop for parents, students,
+                donors and volunteers, and it was getting in their way. Over one
+                semester our team worked out why, rebuilt the structure, and
+                tested a prototype with real people.
+              </p>
+            </div>
+
+            <figure class="hero-visual">
+              <div class="device-panel">
+                <img
+                  class="device device-phone"
+                  src="images/club-ability/iPhone%2015%20Pro%20-%20Black%20Flatten.png"
+                  alt="Redesigned Club Ability homepage on a phone"
+                  width="167"
+                  height="342"
+                />
+                <img
+                  class="device device-laptop"
+                  src="images/club-ability/Macbook%20Air%20M2%20Midnight%20Flatten.png"
+                  alt="Redesigned Club Ability homepage on a laptop"
+                  width="427"
+                  height="258"
+                />
+              </div>
+              <figcaption>
+                The redesigned homepage on phone and laptop (final high-fidelity
+                prototype).
+              </figcaption>
+            </figure>
+          </div>
+
+          <dl class="meta-strip">
+            <div class="meta-item">
+              <dt>Course</dt>
+              <dd>DWDD 2410, service-learning UX project</dd>
+            </div>
+            <div class="meta-item">
+              <dt>Client</dt>
+              <dd>Club Ability, a “Tech for All” education organization</dd>
+            </div>
+            <div class="meta-item">
+              <dt>When</dt>
+              <dd>Spring 2026 semester, team project</dd>
+            </div>
+            <div class="meta-item">
+              <dt>My role</dt>
+              <dd>UI/UX contributor, involved in most stages of the project</dd>
+            </div>
+            <div class="meta-item">
+              <dt>Methods</dt>
+              <dd>Survey, interviews, heuristic review, eye-tracking, prototype testing</dd>
+            </div>
+          </dl>
+        </div>
+      </header>
+
+      <!-- ============ PROCESS ============ -->
+      <section class="section section-sand process" aria-labelledby="process-heading">
+        <div class="section-inner">
+          <div class="process-header">
+            <p class="eyebrow eyebrow-ink">How the semester went</p>
+            <h2 id="process-heading" class="process-title">
+              Five stages, from the first client interview to a tested prototype.
+            </h2>
+          </div>
+
+          <ol class="stages">
+            <li class="stage">
+              <span class="stage-number">01</span>
+              <h3>Frame the problem</h3>
+              <p>
+                Client and stakeholder interviews, early sketches, a list of
+                assumptions, a scope draft and How Might We questions.
+              </p>
+            </li>
+            <li class="stage">
+              <span class="stage-number">02</span>
+              <h3>Research</h3>
+              <p>
+                A survey, four discovery interviews, a heuristic review of the
+                old site, and an eye-tracking study with three participants.
+              </p>
+            </li>
+            <li class="stage">
+              <span class="stage-number">03</span>
+              <h3>Organize</h3>
+              <p>Personas, scenario maps and a sitemap to decide what belongs where.</p>
+            </li>
+            <li class="stage">
+              <span class="stage-number">04</span>
+              <h3>Design</h3>
+              <p>Wireframes and revisions, surface comps, then a high-fidelity prototype.</p>
+            </li>
+            <li class="stage">
+              <span class="stage-number">05</span>
+              <h3>Test</h3>
+              <p>Task-based prototype tests, with seven or eight people on each task.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ 01 PROBLEM ============ -->
+      <section id="problem" class="section section-cream" aria-labelledby="problem-heading">
+        <div class="section-inner stack-56">
+          <div class="section-header">
+            <div class="section-label">
+              <span class="numeral">01</span>
+              <span class="label">The problem</span>
+            </div>
+            <div class="section-title">
+              <h2 id="problem-heading">The old site made people work for basic answers.</h2>
+              <p>
+                We started by looking at the homepage the way a first-time parent
+                would. Four problems kept coming up.
+              </p>
+            </div>
+          </div>
+
+          <div class="statement">
+            <p class="eyebrow">Problem statement</p>
+            <p class="statement-text">
+              Users need a clear, easy-to-understand program website. Confusing
+              navigation, unclear information and language barriers make it hard
+              for parents, students and adult learners to find programs and take
+              action.
+            </p>
+          </div>
+
+          <figure class="original-site">
+            <div class="shots">
+              <img
+                src="images/club-ability/original-website-1.png"
+                alt="Hero banner of the original Club Ability homepage"
+                width="512"
+                height="324"
+                loading="lazy"
+              />
+              <img
+                src="images/club-ability/original-mobile-nav.png"
+                alt="The original site’s mobile menu"
+                width="184"
+                height="324"
+                loading="lazy"
+              />
+              <img
+                src="images/club-ability/original-card.png"
+                alt="A program flyer from the original site with the price and details set inside the image"
+                width="410"
+                height="324"
+                loading="lazy"
+              />
+            </div>
+            <figcaption>
+              The original site: a hero banner, the mobile menu, and a program
+              flyer with the price and details set inside the image.
+            </figcaption>
+          </figure>
+
+          <ul class="issues">
+            <li class="issue">
+              <h3>Navigation with no clear path</h3>
+              <p>
+                Too many options, no clear hierarchy and no strong primary
+                action. Visitors had to stop and decide where to go before they
+                could do anything.
+              </p>
+            </li>
+            <li class="issue">
+              <h3>Key details buried</h3>
+              <p>
+                Pricing, program structure and enrollment steps weren’t visible
+                or prioritized, so people searched and guessed.
+              </p>
+            </li>
+            <li class="issue">
+              <h3>Calls to action that didn’t call</h3>
+              <p>
+                Buttons didn’t stand out, and several actions carried the same
+                visual weight. It wasn’t obvious what to click next.
+              </p>
+            </li>
+            <li class="issue">
+              <h3>English and Spanish tangled together</h3>
+              <p>
+                Content mixed both languages, and some text was baked into
+                images. That is harder for bilingual visitors to follow, and it
+                fails both the accessibility and real-world-match heuristics.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ 02 RESEARCH ============ -->
+      <section id="research" class="section section-sand section-research" aria-labelledby="research-heading">
+        <div class="section-inner stack-64">
+          <div class="section-header">
+            <div class="section-label">
+              <span class="numeral">02</span>
+              <span class="label">Research</span>
+            </div>
+            <div class="section-title">
+              <h2 id="research-heading">Before drawing anything, we listened and watched.</h2>
+              <p>
+                Five methods, each answering a different question: what the
+                client wants, what people say they need, what they actually do,
+                and where the old site breaks the rules.
+              </p>
+            </div>
+          </div>
+
+          <div class="starting-point">
+            <p class="starting-lead">
+              The first thing we learned from the client is that one website has
+              to serve parents, students aged 8 to 17, young adults, adult
+              learners, donors and volunteers. They all arrive with different
+              goals, so we couldn’t design for a single visitor.
+            </p>
+            <div class="three-columns">
+              <div class="list-block">
+                <h3 class="eyebrow">What the client told us</h3>
+                <ul class="rule-list">
+                  <li>The site is the main way new people find Club Ability.</li>
+                  <li>Many visitors have low technical confidence.</li>
+                  <li>English and Spanish both matter.</li>
+                  <li>Families need clear program information and pricing.</li>
+                  <li>The organization wants to build trust with families.</li>
+                </ul>
+              </div>
+              <div class="list-block">
+                <h3 class="eyebrow">What we assumed</h3>
+                <ul class="rule-list">
+                  <li>People prefer simple, clear navigation.</li>
+                  <li>They want to see pricing before they decide.</li>
+                  <li>They leave when they feel confused.</li>
+                  <li>Mobile accessibility matters.</li>
+                </ul>
+              </div>
+              <div class="list-block">
+                <h3 class="eyebrow">How might we…</h3>
+                <ul class="rule-list">
+                  <li>make programs easier for first-timers to understand?</li>
+                  <li>help people find the right course quickly?</li>
+                  <li>reduce confusion during enrollment?</li>
+                  <li>support bilingual visitors well?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Survey -->
+          <div class="split" style="--cols: 600fr 524fr">
+            <figure class="figure">
+              <img
+                src="images/club-ability/survey_result.png"
+                alt="Survey results chart showing what people said they cared about"
+                width="600"
+                height="325"
+                loading="lazy"
+              />
+            </figure>
+            <div class="split-text">
+              <h3 class="eyebrow">Survey</h3>
+              <p class="split-heading">What people said they cared about</p>
+              <ul class="item-list">
+                <li>
+                  <strong>Clear pricing</strong>
+                  <span>Rated highly important when deciding whether to sign up online.</span>
+                </li>
+                <li>
+                  <strong>Step-by-step registration</strong>
+                  <span>People wanted a simple enrollment process that says what happens next.</span>
+                </li>
+                <li>
+                  <strong>Simple, bilingual language</strong>
+                  <span>Important, because Club Ability serves diverse families.</span>
+                </li>
+                <li>
+                  <strong>Help and trust</strong>
+                  <span>Clear contact options, testimonials and other trust signals matter before committing.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Heuristic review -->
+          <div class="split" style="--cols: 444fr 680fr">
+            <div class="split-text">
+              <h3 class="eyebrow">Heuristic review</h3>
+              <p class="split-heading">Checking the old site against the usual rules</p>
+              <p>
+                We reviewed the original site against usability heuristics,
+                including visibility of system status, consistency and
+                standards, recognition rather than recall, and minimalist
+                design. Strong areas were marked green and problems red.
+              </p>
+              <ul class="plain-list">
+                <li>Missing or weak primary call to action</li>
+                <li>Text embedded in images</li>
+                <li>Inconsistent spacing, button styles and logo sizing</li>
+                <li>English and Spanish mixed together</li>
+                <li>Clickable areas that weren’t obviously clickable</li>
+                <li>Sponsor logos with no consistent hierarchy</li>
+              </ul>
+            </div>
+            <figure class="figure">
+              <img
+                src="images/club-ability/heuristic.png"
+                alt="The original site marked up with green for strong areas and red for problems"
+                width="680"
+                height="422"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+
+          <!-- Discovery interviews -->
+          <div class="split" style="--cols: 680fr 444fr">
+            <figure class="figure">
+              <img
+                src="images/club-ability/interview_summary.png"
+                alt="Notes from four discovery interviews grouped into five patterns"
+                width="680"
+                height="374"
+                loading="lazy"
+              />
+            </figure>
+            <div class="split-text">
+              <h3 class="eyebrow">Discovery interviews</h3>
+              <p class="split-heading">Four people, five patterns</p>
+              <p>
+                We interviewed four participants in different roles to see what
+                made them feel confident, confused or ready to act.
+              </p>
+              <ul class="plain-list">
+                <li>They’re mobile-first, but prefer a laptop for serious tasks like registering.</li>
+                <li>They want trust signals before sharing personal information.</li>
+                <li>Spanish-speaking users need real bilingual support.</li>
+                <li>Clear organization and step-by-step guidance reduce stress.</li>
+                <li>Short videos or guided instructions feel easier than long text.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Eye tracking -->
+          <div class="split" style="--cols: 444fr 680fr">
+            <div class="split-text">
+              <h3 class="eyebrow">Eye-tracking + think-aloud</h3>
+              <p class="split-heading">Where people looked, and why they hesitated</p>
+              <p>
+                Three participants worked through task scenarios while we
+                tracked their eyes and asked them to think aloud. They explored
+                the homepage, said what they thought the organization does,
+                looked for program information, tried to sign up for a course,
+                and hunted for reviews or other trust signals.
+              </p>
+            </div>
+            <figure class="figure">
+              <img
+                src="images/club-ability/keyfindings.png"
+                alt="Eye-tracking heatmap of the original homepage"
+                width="680"
+                height="383"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ INSIGHT BAND ============ -->
+      <section class="insight-band" aria-labelledby="insight-heading">
+        <div class="section-inner">
+          <p class="eyebrow eyebrow-gold">What the research added up to</p>
+          <h2 id="insight-heading">
+            The information was mostly there. It was just hard to find and hard
+            to understand.
+          </h2>
+          <p class="insight-note">
+            So the redesign had to lean on clear navigation, a strong visual
+            hierarchy and next steps that are always visible.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 03 INSIGHTS AND PRINCIPLES ============ -->
+      <section id="insights" class="section section-cream" aria-labelledby="insights-heading">
+        <div class="section-inner stack-56">
+          <div class="section-header">
+            <div class="section-label">
+              <span class="numeral">03</span>
+              <span class="label">Insights and principles</span>
+            </div>
+            <div class="section-title">
+              <h2 id="insights-heading">Five things the research kept telling us.</h2>
+              <p>Each one became a rule we could hold the design to.</p>
+            </div>
+          </div>
+
+          <ol class="insights">
+            <li class="insight">
+              <span class="insight-number">1</span>
+              <div class="finding">
+                <h3>Users scan before they read</h3>
+                <p>
+                  Important information should sit in clear headings, cards,
+                  labels and buttons, not long paragraphs.
+                </p>
+              </div>
+              <div class="response">
+                <p class="eyebrow">So we did</p>
+                <p>Short sections, clear titles, visual hierarchy.</p>
+              </div>
+            </li>
+            <li class="insight">
+              <span class="insight-number">2</span>
+              <div class="finding">
+                <h3>Too many choices slow people down</h3>
+                <p>
+                  When navigation or program options feel overwhelming, people
+                  hesitate or click at random.
+                </p>
+              </div>
+              <div class="response">
+                <p class="eyebrow">So we did</p>
+                <p>Group programs by audience or age, and cut unnecessary navigation choices.</p>
+              </div>
+            </li>
+            <li class="insight">
+              <span class="insight-number">3</span>
+              <div class="finding">
+                <h3>Trust has to show up early</h3>
+                <p>
+                  Parents and donors need proof that the organization is
+                  credible before they act.
+                </p>
+              </div>
+              <div class="response">
+                <p class="eyebrow">So we did</p>
+                <p>Testimonials, mission content, impact numbers and clear support pages.</p>
+              </div>
+            </li>
+            <li class="insight">
+              <span class="insight-number">4</span>
+              <div class="finding">
+                <h3>Enrollment has to feel simple</h3>
+                <p>People need to know exactly what happens after they choose a course.</p>
+              </div>
+              <div class="response">
+                <p class="eyebrow">So we did</p>
+                <p>
+                  A clear enrollment flow with the program already selected and
+                  as few form fields as possible.
+                </p>
+              </div>
+            </li>
+            <li class="insight">
+              <span class="insight-number">5</span>
+              <div class="finding">
+                <h3>Language has to be plain, and bilingual</h3>
+                <p>Language barriers keep people from understanding programs and acting on them.</p>
+              </div>
+              <div class="response">
+                <p class="eyebrow">So we did</p>
+                <p>Simple wording, with English and Spanish content supported clearly.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="principles">
+            <div class="principles-header">
+              <h3 class="eyebrow eyebrow-ink">Design principles</h3>
+              <p class="principles-title">
+                Four principles from class that gave us a reason for each layout
+                choice.
+              </p>
+            </div>
+            <div class="principle-columns">
+              <article class="principle">
+                <h4>Reduce cognitive load</h4>
+                <p>Simplify the structure so people don’t have to work to understand the site.</p>
+                <p class="eyebrow">In the design</p>
+                <p class="principle-use">
+                  Clear page sections, simple cards, short labels, step-by-step
+                  enrollment.
+                </p>
+              </article>
+              <article class="principle">
+                <h4>Hick’s Law</h4>
+                <p>The more choices people have, the longer they take to decide.</p>
+                <p class="eyebrow">In the design</p>
+                <p class="principle-use">
+                  Fewer navigation options, age-based program categories, one
+                  primary action per section.
+                </p>
+              </article>
+              <article class="principle">
+                <h4>Selective attention</h4>
+                <p>People notice what stands out visually.</p>
+                <p class="eyebrow">In the design</p>
+                <p class="principle-use">
+                  Strong CTA buttons, highlighted pricing and schedule, clear
+                  headings and labels.
+                </p>
+              </article>
+              <article class="principle">
+                <h4>Recognition over recall</h4>
+                <p>People shouldn’t have to remember where information is hidden.</p>
+                <p class="eyebrow">In the design</p>
+                <p class="principle-use">
+                  Visible program categories, clear course cards, repeated CTAs
+                  where they help.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 04 DESIGN ============ -->
+      <section id="design" class="section section-sand" aria-labelledby="design-heading">
+        <div class="section-inner stack-64">
+          <div class="section-header">
+            <div class="section-label">
+              <span class="numeral">04</span>
+              <span class="label">Design</span>
+            </div>
+            <div class="section-title">
+              <h2 id="design-heading">From structure to screens.</h2>
+              <p>
+                Personas and a sitemap set the structure. Wireframes, surface
+                comps and a high-fidelity prototype came after.
+              </p>
+            </div>
+          </div>
+
+          <!-- Personas -->
+          <div class="split" style="--cols: 484fr 640fr">
+            <div class="split-text">
+              <h3 class="eyebrow">Personas</h3>
+              <p class="split-heading">Two people to keep in mind</p>
+              <p>
+                Maria is a parent and adult learner with low tech confidence and
+                not much time. She needs plain language and a reason to trust
+                the site. Carlos is a young adult who scans quickly, compares
+                programs, and expects schedule, price and enrollment details
+                right away.
+              </p>
+              <p>
+                Two personas can’t stand in for everyone. Students, donors and
+                volunteers still needed a way in. But Maria and Carlos kept us
+                from designing for one imaginary visitor.
+              </p>
+              <a
+                class="text-link"
+                href="https://www.figma.com/design/jC67QuTvhDofyBBabxNkwZ/Club-Ability-project?node-id=3-14638"
+                target="_blank"
+                rel="noopener noreferrer"
+                >See the full personas in Figma &rarr;</a
+              >
+            </div>
+            <figure class="figure">
+              <img
+                src="images/club-ability/personas.png"
+                alt="Persona cards for Maria, a parent and adult learner, and Carlos, a young adult"
+                width="640"
+                height="426"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+
+          <!-- Sitemap -->
+          <div class="split" style="--cols: 600fr 524fr">
+            <figure class="figure">
+              <img
+                src="images/club-ability/sitemap.png"
+                alt="Sitemap with six branches: Programs, Enroll, About Us, Support, Resources and Contact"
+                width="600"
+                height="467"
+                loading="lazy"
+              />
+            </figure>
+            <div class="split-text">
+              <h3 class="eyebrow">Sitemap</h3>
+              <p class="split-heading">One path from program to enrollment</p>
+              <p class="branches">
+                Programs &middot; Enroll &middot; About Us &middot; Support &middot;
+                Resources &middot; Contact
+              </p>
+              <p>
+                The sitemap has six branches, and Programs is split by age
+                group. Enrollment is its own short flow of program selection,
+                enrollment form and confirmation. People enter it from a program
+                card rather than from the main navigation, because they should
+                enroll after they’ve chosen a program, not before.
+              </p>
+            </div>
+          </div>
+
+          <!-- Wireframes -->
+          <div class="split" style="--cols: 484fr 640fr">
+            <div class="split-text">
+              <h3 class="eyebrow">Wireframes</h3>
+              <p class="split-heading">Seven pages in grayscale</p>
+              <p>
+                We started with low-fidelity wireframes for Home, Programs, Sign
+                Up, About Us, Support Us, Resources and Contact Us, each in
+                desktop and mobile. Working in grayscale let us settle
+                structure, content blocks and where each call to action sits
+                before thinking about color.
+              </p>
+              <a
+                class="text-link"
+                href="https://www.figma.com/design/jC67QuTvhDofyBBabxNkwZ/Club-Ability-project?node-id=0-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open the wireframes in Figma &rarr;</a
+              >
+            </div>
+            <figure class="figure figure-panel">
+              <img
+                src="images/club-ability/wireframes.png"
+                alt="Grayscale wireframes of the seven pages in desktop and mobile"
+                width="572"
+                height="350"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+
+          <!-- Surface comps -->
+          <div class="split" style="--cols: 640fr 484fr">
+            <figure class="figure figure-panel">
+              <img
+                src="images/club-ability/surface_comps.png"
+                alt="Surface comps of the same pages with color, type and imagery applied"
+                width="530"
+                height="362"
+                loading="lazy"
+              />
+            </figure>
+            <div class="split-text">
+              <h3 class="eyebrow">Surface comps</h3>
+              <p class="split-heading">The same pages, with a visual identity</p>
+              <p>
+                Surface comps applied color, type, imagery and reusable
+                components to the wireframes, again for desktop and mobile. The
+                mobile versions also show the open navigation menu. We designed
+                the course registration pages and the volunteer, sponsorship and
+                donation forms too.
+              </p>
+              <a
+                class="text-link"
+                href="https://www.figma.com/design/jC67QuTvhDofyBBabxNkwZ/Club-Ability-project?node-id=1-3082"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open the surface comps in Figma &rarr;</a
+              >
+            </div>
+          </div>
+
+          <!-- Final screens -->
+          <div class="final-screens">
+            <h3 class="eyebrow">High-fidelity prototype</h3>
+            <p class="final-heading">Where the principles show up in the final screens</p>
+            <figure>
+              <div class="screens">
+                <img
+                  class="screen-nav"
+                  src="images/club-ability/high-fidelity-prototype-nav.png"
+                  alt="Simplified top navigation of the final prototype"
+                  width="971"
+                  height="55"
+                  loading="lazy"
+                />
+                <img
+                  class="screen-card"
+                  src="images/club-ability/high-fidelity-prototype-signup.png"
+                  alt="A program card showing age group and schedule"
+                  width="448"
+                  height="169"
+                  loading="lazy"
+                />
+                <img
+                  class="screen-overview"
+                  src="images/club-ability/high-fidelity-prototype-hero.png"
+                  alt="A course overview showing price, duration and skill level, with a View Programs button"
+                  width="512"
+                  height="169"
+                  loading="lazy"
+                />
+                <img
+                  class="screen-mobile"
+                  src="images/club-ability/high-fidelity-prototype-course-details.png"
+                  alt="The final prototype on a phone"
+                  width="151"
+                  height="240"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                The simplified top navigation, a program card with age group and
+                schedule, a course overview with price, duration and skill
+                level, and one clear “View Programs” button.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 05 TESTING ============ -->
+      <section id="testing" class="section section-cream" aria-labelledby="testing-heading">
+        <div class="section-inner stack-64">
+          <div class="section-header">
+            <div class="section-label">
+              <span class="numeral">05</span>
+              <span class="label">Testing</span>
+            </div>
+            <div class="section-title">
+              <h2 id="testing-heading">We tested the prototype one task at a time.</h2>
+              <p>
+                Participants worked through three scenarios in the prototype,
+                with seven or eight people on each. That’s a small group, so we
+                read the numbers as direction rather than proof.
+              </p>
+            </div>
+          </div>
+
+          <div class="task-results">
+            <article class="task">
+              <div class="task-text">
+                <p class="eyebrow task-status task-good">Worked well</p>
+                <h3>Find a kids’ course</h3>
+                <blockquote>
+                  “Pretend you are a parent looking for a Minecraft course for
+                  your kid, so you can learn more about it.”
+                </blockquote>
+                <p class="task-meta">8 responses &middot; 55.3 s average</p>
+              </div>
+              <dl class="stats">
+                <div class="stat">
+                  <dt>Success rate</dt>
+                  <dd class="stat-value stat-good">100%</dd>
+                </div>
+                <div class="stat">
+                  <dt>Drop-off</dt>
+                  <dd class="stat-value">0%</dd>
+                </div>
+                <div class="stat">
+                  <dt>Misclick rate</dt>
+                  <dd class="stat-value">12.5%</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="task">
+              <div class="task-text">
+                <p class="eyebrow task-status task-bad">Needs work</p>
+                <h3>Learn about Club Ability and consider donating</h3>
+                <blockquote>
+                  “Navigate to where you can find out more information about
+                  Club Ability and what they are about.”
+                </blockquote>
+                <p class="task-meta">7 responses &middot; 10.6 s average</p>
+              </div>
+              <dl class="stats">
+                <div class="stat">
+                  <dt>Success rate</dt>
+                  <dd class="stat-value stat-bad">42.9%</dd>
+                </div>
+                <div class="stat">
+                  <dt>Drop-off</dt>
+                  <dd class="stat-value">57.1%</dd>
+                </div>
+                <div class="stat">
+                  <dt>Misclick rate</dt>
+                  <dd class="stat-value">63.9%</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="task">
+              <div class="task-text">
+                <p class="eyebrow task-status task-good">Mostly worked</p>
+                <h3>Look for a program for an older audience</h3>
+                <blockquote>
+                  “Pretend you are an adult looking for a course on how to 3D
+                  print.”
+                </blockquote>
+                <p class="task-meta">7 responses &middot; 12.3 s average</p>
+              </div>
+              <dl class="stats">
+                <div class="stat">
+                  <dt>Success rate</dt>
+                  <dd class="stat-value stat-good">85.7%</dd>
+                </div>
+                <div class="stat">
+                  <dt>Drop-off</dt>
+                  <dd class="stat-value">14.3%</dd>
+                </div>
+                <div class="stat">
+                  <dt>Misclick rate</dt>
+                  <dd class="stat-value">46.7%</dd>
+                </div>
+              </dl>
+            </article>
+
+            <p class="task-source">
+              Results from our Maze usability report.
+              <a
+                class="text-link"
+                href="https://app.maze.co/report/ClubAbilityPrototype/2f9wb7mo21h2yn/intro"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open the full report &rarr;</a
+              >
+            </p>
+          </div>
+
+          <div class="what-we-read">
+            <div>
+              <h3>What worked</h3>
+              <p>
+                Finding a kids’ course was the easiest task. Everyone who tried
+                it got there and nobody gave up. The older-audience task mostly
+                worked too, though its misclick rate was high at 46.7%, which
+                tells me the age categories could be easier to tell apart.
+              </p>
+            </div>
+            <div>
+              <h3>What didn’t</h3>
+              <p>
+                The About and donate path is where people got lost. Fewer than
+                half found it, more than half dropped off, and the misclick rate
+                was 63.9%. Our research said trust and clear information about
+                the organization mattered most to parents and donors, so this is
+                the gap I’d close first.
+              </p>
+            </div>
+          </div>
+
+          <div class="before-after">
+            <h3>What changed between the old site and the prototype</h3>
+            <div class="ba-columns">
+              <section class="ba-col" aria-labelledby="before-heading">
+                <h4 id="before-heading" class="ba-title ba-before">Before</h4>
+                <div class="ba-images ba-images-before">
+                  <img
+                    src="images/club-ability/before1.png"
+                    alt="Original site hero banner"
+                    width="259"
+                    height="163"
+                    loading="lazy"
+                  />
+                  <img
+                    src="images/club-ability/before2.png"
+                    alt="Original site mobile menu"
+                    width="87"
+                    height="152"
+                    loading="lazy"
+                  />
+                  <img
+                    src="images/club-ability/before3.png"
+                    alt="Original site program flyer"
+                    width="164"
+                    height="130"
+                    loading="lazy"
+                  />
+                </div>
+                <ul class="line-list">
+                  <li>Navigation that was unclear and overwhelming</li>
+                  <li>Programs hard to find by audience</li>
+                  <li>No visible pricing or enrollment path</li>
+                  <li>Inconsistent visual design and spacing</li>
+                  <li>Weak trust signals and calls to action</li>
+                </ul>
+              </section>
+              <section class="ba-col" aria-labelledby="after-heading">
+                <h4 id="after-heading" class="ba-title ba-after">After</h4>
+                <div class="ba-images ba-images-after">
+                  <img
+                    src="images/club-ability/after1.png"
+                    alt="Redesigned homepage on desktop"
+                    width="259"
+                    height="221"
+                    loading="lazy"
+                  />
+                  <img
+                    src="images/club-ability/after2.png"
+                    alt="Redesigned homepage on a phone"
+                    width="85"
+                    height="214"
+                    loading="lazy"
+                  />
+                  <img
+                    src="images/club-ability/after3.png"
+                    alt="Redesigned program page on a phone"
+                    width="88"
+                    height="215"
+                    loading="lazy"
+                  />
+                </div>
+                <ul class="line-list">
+                  <li>Navigation grouped by who it’s for</li>
+                  <li>Programs browsable by age and category</li>
+                  <li>Visible pricing and a simpler enrollment flow</li>
+                  <li>Consistent hierarchy and spacing</li>
+                  <li>Stronger calls to action, testimonials and trust content</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 06 CONCLUSION ============ -->
+      <section id="conclusion" class="section section-dark" aria-labelledby="conclusion-heading">
+        <div class="section-inner stack-64">
+          <div class="section-header">
+            <div class="section-label">
+              <span class="numeral">06</span>
+              <span class="label">Conclusion</span>
+            </div>
+            <div class="section-title">
+              <h2 id="conclusion-heading">Where this landed.</h2>
+              <p>
+                Finding a program worked well in testing. Finding out about Club
+                Ability itself didn’t. Both results shaped what I took away from
+                the project.
+              </p>
+            </div>
+          </div>
+
+          <blockquote class="reflection">
+            Users bring emotions into the experience. Confusing design creates
+            stress, especially for people who already feel unsure about
+            technology or language.
+          </blockquote>
+
+          <div class="reflections">
+            <div class="reflection-col">
+              <h3>What went well</h3>
+              <ul class="dark-list">
+                <li>Early research gave us a clear direction.</li>
+                <li>The team made decisions together.</li>
+                <li>Personas kept us thinking about real people.</li>
+                <li>Heuristic markup found real problems early.</li>
+                <li>Eye-tracking gave us concrete evidence.</li>
+              </ul>
+            </div>
+            <div class="reflection-col">
+              <h3>What I’d do differently</h3>
+              <ul class="dark-list">
+                <li>Run more interviews to check our assumptions.</li>
+                <li>Test the wireframes with people sooner.</li>
+                <li>Leave more time for rounds of iteration.</li>
+                <li>Document the process better as we go.</li>
+                <li>Test on a wider range of devices.</li>
+              </ul>
+            </div>
+            <div class="reflection-col">
+              <h3>What I learned</h3>
+              <ul class="dark-list">
+                <li>UX is empathy before aesthetics.</li>
+                <li>Research saves time in the long run.</li>
+                <li>Simplicity takes deliberate decisions.</li>
+                <li>Real users always surprise you.</li>
+                <li>Every design decision should be justifiable.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="if-kept-going">
+            <h3 class="eyebrow eyebrow-gold">If I kept going</h3>
+            <p>
+              Rework how people reach the About and donation pages, then run
+              that same task again with more participants to see whether the
+              42.9% success rate moves.
+            </p>
+          </div>
+
+          <div class="project-files">
+            <h3 class="eyebrow eyebrow-gold">Project files</h3>
+            <ul class="file-links">
+              <li>
+                <h4>Wireframes</h4>
+                <p>Low-fidelity layouts for seven pages, desktop and mobile.</p>
+                <a
+                  href="https://www.figma.com/design/jC67QuTvhDofyBBabxNkwZ/Club-Ability-project?node-id=0-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open in Figma &rarr;<span class="visually-hidden"> (wireframes)</span></a
+                >
+              </li>
+              <li>
+                <h4>Surface comps</h4>
+                <p>Visual design for each page, plus registration pages and forms.</p>
+                <a
+                  href="https://www.figma.com/design/jC67QuTvhDofyBBabxNkwZ/Club-Ability-project?node-id=1-3082"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open in Figma &rarr;<span class="visually-hidden"> (surface comps)</span></a
+                >
+              </li>
+              <li>
+                <h4>Personas</h4>
+                <p>The full persona cards for Maria and Carlos.</p>
+                <a
+                  href="https://www.figma.com/design/jC67QuTvhDofyBBabxNkwZ/Club-Ability-project?node-id=3-14638"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open in Figma &rarr;<span class="visually-hidden"> (personas)</span></a
+                >
+              </li>
+              <li>
+                <h4>Usability report</h4>
+                <p>Task results from the prototype test.</p>
+                <a
+                  href="https://app.maze.co/report/ClubAbilityPrototype/2f9wb7mo21h2yn/intro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open in Maze &rarr;<span class="visually-hidden"> (usability report)</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="section-inner footer-inner">
+        <p class="footer-title">Club Ability website redesign</p>
+        <p class="footer-meta">DWDD 2410 service-learning UX project &middot; Spring 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>
